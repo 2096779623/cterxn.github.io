@@ -30,12 +30,12 @@ jobs:
       - name: Build Package
         run: |
           set -x
-          termux-create-package json/build.json
+          termux-create-package build.json
       - name: Upload Artifact
         uses: actions/upload-artifact@v3.0.0
         with:
-          path: ./json/
+          path: ./
       - name: Download Artifact
         uses: actions/download-artifact@v3.0.0
         with:
-          path: ./json/
+          path: ./
