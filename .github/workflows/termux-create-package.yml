@@ -29,6 +29,7 @@ jobs:
           python -m pip install ruamel.yaml termux-create-package
       - name: Build Package
         run: |
+          cd json
           file=$(ls|grep json)
           termux-create-package ${file}
       - name: Upload Artifact
