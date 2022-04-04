@@ -1,0 +1,12 @@
+{
+  "name": "jsql-injection",
+  "version": "0.8.5",
+  "homepage": "https://utermux.eu.org",
+  "maintainer": "2096779623,",
+  "description": "jSQL Injection 是一个轻量级应用程序，用于从远程服务器查找数据库信息。",
+  "arch": "all",
+  "depends": ["openjdk-17", "tigervnc"],
+  "files" :{
+    "jsql.jar": "bin/jsql-injection.jar"
+  }
+}
