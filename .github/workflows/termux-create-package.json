@@ -1,0 +1,20 @@
+name: Packages
+
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - 'json/**'
+  pull_request:
+    paths:
+    - 'json/**'
+  workflow_dispatch:
+    inputs:
+      packages:
+        description: "A space-separated names of packages selected for rebuilding"
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
