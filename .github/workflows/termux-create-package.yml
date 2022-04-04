@@ -30,7 +30,8 @@ jobs:
       - name: Build Package
         run: |
           set -x
-          ls
+          cd json/$1
+          termux-create-package build.json
       - name: Upload Artifact
         uses: actions/upload-artifact@v3.0.0
         with:
