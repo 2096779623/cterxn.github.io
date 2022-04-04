@@ -29,14 +29,13 @@ jobs:
           python -m pip install ruamel.yaml termux-create-package
       - name: Build Package
         run: |
-          cd json
-          file=$(ls|grep json)
-          termux-create-package ${file}
+          set -x
+          termux-create-package json/build.json
       - name: Upload Artifact
         uses: actions/upload-artifact@v3.0.0
         with:
-          path: ./
+          path: ./json/
       - name: Download Artifact
         uses: actions/download-artifact@v3.0.0
         with:
-          path: ./
+          path: ./json/
